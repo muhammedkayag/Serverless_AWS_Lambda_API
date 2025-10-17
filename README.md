@@ -131,12 +131,12 @@ Tarayıcıda veya Postman'da aşağıdaki örnek URL'leri test edebilirsin:
 
 ### Ekran Görüntüleri
 
-!(pics/o1.png)
+![](pics/o1.png)
 
-!(pics/o2.png)
+![](pics/o2.png)
 
-!(pics/o3.png)
+![](pics/o3.png)
 
-!(pics/o4.png)
+![](pics/o4.png)
 
 
