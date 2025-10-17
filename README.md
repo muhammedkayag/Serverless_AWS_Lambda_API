@@ -18,7 +18,7 @@ Bu proje kapsamında oluşturulan API, kullanıcıdan `name` ve opsiyonel olarak
 
 ### 🏗️ Mimari Akış
 1. Kullanıcı, tarayıcı veya Postman üzerinden bir HTTP isteği yapar:  
-   `https://{api-id}.execute-api.{region}.amazonaws.com/hello?name=Ali&number=5`
+   `https://{api-id}.execute-api.{region}.amazonaws.com/default/helloFunction?name=Ali&number=5`
 2. **API Gateway** isteği alır ve **Lambda fonksiyonuna** yönlendirir.
 3. **Lambda**, parametreleri işler:  
    - “Merhaba {name}” mesajı oluşturur.  
@@ -114,7 +114,7 @@ def lambda_handler(event, context):
 
 6.  AWS otomatik olarak bir **Invoke URL** oluşturur:
 
-    `https://abcd1234.execute-api.eu-central-1.amazonaws.com/hello`
+    `https://abcd1234.execute-api.eu-central-1.amazonaws.com/default/helloFunction`
 
 * * * * *
 
@@ -124,13 +124,19 @@ Tarayıcıda veya Postman'da aşağıdaki örnek URL'leri test edebilirsin:
 
 | Test | URL | Beklenen Sonuç |
 | --- | --- | --- |
-| Basit test | `/hello?name=Ali` | `{"message": "Merhaba Ali, bu fonksiyon bulutta çalışıyor!"}` |
-| Sayı parametresiyle | `/hello?name=Ayşe&number=5` | `{"message": "Merhaba Ayşe, bu fonksiyon bulutta çalışıyor! 5 sayısının karesi 25'tir."}` |
-| Hatalı sayı | `/hello?name=Ali&number=abc` | `{"message": "Merhaba Ali, bu fonksiyon bulutta çalışıyor! Ancak geçerli bir sayı girmedin."}` |
+| Basit test | `/helloFunction?name=Ali` | `{"message": "Merhaba Ali, bu fonksiyon bulutta çalışıyor!"}` |
+| Sayı parametresiyle | `/helloFunction?name=Ayşe&number=5` | `{"message": "Merhaba Ayşe, bu fonksiyon bulutta çalışıyor! 5 sayısının karesi 25'tir."}` |
+| Hatalı sayı | `/helloFunction?name=Ali&number=abc` | `{"message": "Merhaba Ali, bu fonksiyon bulutta çalışıyor! Ancak geçerli bir sayı girmedin."}` |
 
 
+### Ekran Görüntüleri
 
+!(pics/o1.png)
 
+!(pics/o2.png)
 
+!(pics/o3.png)
+
+!(pics/o4.png)
 
 
