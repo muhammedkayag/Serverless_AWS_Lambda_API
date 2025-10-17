@@ -18,7 +18,7 @@ Bu proje kapsamında oluşturulan API, kullanıcıdan `name` ve opsiyonel olarak
 
 ### 🏗️ Mimari Akış
 1. Kullanıcı, tarayıcı veya Postman üzerinden bir HTTP isteği yapar:  
-   `https://{api-id}.execute-api.{region}.amazonaws.com/default/helloFunction?name=Ali&number=5`
+   `https://oiszm80voi.execute-api.us-east-1.amazonaws.com/default/helloFunction?name=Ali&number=5`
 2. **API Gateway** isteği alır ve **Lambda fonksiyonuna** yönlendirir.
 3. **Lambda**, parametreleri işler:  
    - “Merhaba {name}” mesajı oluşturur.  
